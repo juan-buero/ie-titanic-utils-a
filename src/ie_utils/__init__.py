@@ -1,4 +1,11 @@
-import pandas as pd
+#import pandas as pd
+
+"""
+IE Titanic utils.
+
+"""
+
+__version__ = "0.1.0" # semver.org
 
 def tokenize(text):
     return text.split()
