@@ -10,4 +10,6 @@ def home():
 @app.route("/tokenize")
 def do_tokenize():
     print(request.args)
-    return str(tokenize("Hello world!"))
+    sentence = request.args["sentence"]
+    lower = bool(request.args.get("lower", False))
+    return str(tokenize(sentence, lower=lower))
