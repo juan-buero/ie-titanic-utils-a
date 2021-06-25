@@ -5,7 +5,10 @@ app = Flask(__name__) #to identify web app
 
 @app.route("/") # decorator for function that URL corresponds to function. Link between function and URL
 def home():
-    return "Hello world!"
+    return {
+        "message": "Hello world!",
+        "version": "0.1",
+    }
 
 @app.route("/tokenize")
 def do_tokenize():
